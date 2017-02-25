@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CE7F512-7037-4D95-ADDD-FBF3B5C2398F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpSynth</RootNamespace>
+    <AssemblyName>CSharpSynth</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>L:\Unity3pt5 Projects\UnitySynth\Assets\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Program Files (x86)\Unity3\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banks\Analog\AnalogInstrument.cs" />
+    <Compile Include="Banks\BankManager.cs" />
+    <Compile Include="Banks\Fm\Envelope.cs" />
+    <Compile Include="Banks\Fm\FMInstrument.cs" />
+    <Compile Include="Banks\Fm\IFMComponent.cs" />
+    <Compile Include="Banks\Instrument.cs" />
+    <Compile Include="Banks\InstrumentBank.cs" />
+    <Compile Include="Banks\Sfz\SfzInstrument.cs" />
+    <Compile Include="Banks\Sfz\SfzRegion.cs" />
+    <Compile Include="Effects\BasicAudioEffect.cs" />
+    <Compile Include="Effects\dBMeter.cs" />
+    <Compile Include="Effects\Echo.cs" />
+    <Compile Include="Midi\MidiEvent.cs" />
+    <Compile Include="Midi\MidiFile.cs" />
+    <Compile Include="Midi\MidiHeader.cs" />
+    <Compile Include="Midi\MidiHelper.cs" />
+    <Compile Include="Midi\MidiTrack.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequencer\MidiSequencer.cs" />
+    <Compile Include="Sequencer\MidiSequencerEvent.cs" />
+    <Compile Include="Synthesis\NoteRegistryKey.cs" />
+    <Compile Include="Synthesis\StreamSynthesizer.cs" />
+    <Compile Include="Synthesis\SynthHelper.cs" />
+    <Compile Include="Synthesis\Voice.cs" />
+    <Compile Include="Wave\DataChunk.cs" />
+    <Compile Include="Wave\DSP\BiQuadLowPass.cs" />
+    <Compile Include="Wave\DSP\SincLowPass.cs" />
+    <Compile Include="Wave\FactChunk.cs" />
+    <Compile Include="Wave\FormatChunk.cs" />
+    <Compile Include="Wave\IChunk.cs" />
+    <Compile Include="Wave\MasterChunk.cs" />
+    <Compile Include="Wave\Sample.cs" />
+    <Compile Include="Wave\WaveFile.cs" />
+    <Compile Include="Wave\WaveFileReader.cs" />
+    <Compile Include="Wave\WaveHelper.cs" />
+    <Compile Include="Wave\WaveFileWriter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
